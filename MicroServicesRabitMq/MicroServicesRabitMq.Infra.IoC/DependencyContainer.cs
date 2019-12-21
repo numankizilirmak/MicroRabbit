@@ -6,6 +6,9 @@ using MicroServicesRabitMq.Banking.Domain.Interfaces;
 using MicroServicesRabitMq.Domain.Core.Bus;
 using MicroServicesRabitMq.Infra.Bus;
 using Microsoft.Extensions.DependencyInjection;
+using MediatR;
+using MicroServicesRabitMq.Banking.Domain.Commands;
+using MicroServicesRabitMq.Banking.Domain.CommandHandlers;
 
 namespace MicroServicesRabitMq.Infra.IoC
 {
@@ -16,6 +19,7 @@ namespace MicroServicesRabitMq.Infra.IoC
             services.AddTransient<IEventBus, RabitMqBus>();
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IRequestHandler<CreateTransferCommand,bool>,TransferCommandHandler>();
             services.AddTransient<BankingDbContext>();
 
         }
