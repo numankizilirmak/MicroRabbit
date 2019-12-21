@@ -9,6 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MicroServicesRabitMq.Banking.Application\MicroServicesRabitMq.Banking.Application.csproj" />
+    <ProjectReference Include="..\MicroServicesRabitMq.Banking.Data\MicroServicesRabitMq.Banking.Data.csproj" />
+    <ProjectReference Include="..\MicroServicesRabitMq.Banking.Domain\MicroServicesRabitMq.Banking.Domain.csproj" />
     <ProjectReference Include="..\MicroServicesRabitMq.Domain.Core\MicroServicesRabitMq.Domain.Core.csproj" />
     <ProjectReference Include="..\MicroServicesRabitMq.Infra.Bus\MicroServicesRabitMq.Infra.Bus.csproj" />
   </ItemGroup>

@@ -97,9 +97,8 @@ namespace MicroServicesRabitMq.Infra.Bus
             {
                 await ProcessEvent(eventName, message).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
         }
