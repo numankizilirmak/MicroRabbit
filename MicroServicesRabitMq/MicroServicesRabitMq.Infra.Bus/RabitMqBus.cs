@@ -76,18 +76,19 @@ namespace MicroServicesRabitMq.Infra.Bus
         private void StartBasicConsume<T>() where T : Event
         {
             var factory = new ConnectionFactory() { HostName = "localhost", DispatchConsumersAsync=true};
-            using (var connection = factory.CreateConnection())
-            {
-                using (var channel = connection.CreateModel())
-                {
+            var connection = factory.CreateConnection();
+
+
+                var channel = connection.CreateModel();
+                
                     var eventName =typeof(T).Name;
                     channel.QueueDeclare(eventName, false, false, false, null);
 
                     var consumer =new AsyncEventingBasicConsumer(channel);
                     consumer.Received += Consumer_Recieved;
                     channel.BasicConsume(eventName, true, consumer);
-                }
-            }
+                
+            
         }
 
         private async Task Consumer_Recieved(object sender, BasicDeliverEventArgs e)
