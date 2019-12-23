@@ -7,10 +7,10 @@
   <ItemGroup>
     <Folder Include="CommandHandlers\" />
     <Folder Include="Commands\" />
-    <Folder Include="EventHandlers\" />
-    <Folder Include="Events\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroServicesRabitMq.Domain.Core\MicroServicesRabitMq.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
