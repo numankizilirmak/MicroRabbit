@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace MicroServicesRabitMq.Banking.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/Banking")]
     public class BankingController : ControllerBase
     {
         private readonly IAccountService _accountService;

@@ -47,13 +47,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{02BFBC77-6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{E7F85A5C-97D9-4751-9CF4-E3E9CBCC3038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesRabitMq.Transfer.Api", "MicroServicesRabitMq.Transfer.Api\MicroServicesRabitMq.Transfer.Api.csproj", "{C5D0BC78-10A4-4E2B-8FB1-86ACA6D73099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesRabitMq.Transfer.Api", "MicroServicesRabitMq.Transfer.Api\MicroServicesRabitMq.Transfer.Api.csproj", "{C5D0BC78-10A4-4E2B-8FB1-86ACA6D73099}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesRabitMq.Transfer.Application", "MicroServicesRabitMq.Transfer.Application\MicroServicesRabitMq.Transfer.Application.csproj", "{1E8B1C99-150B-4E3F-9684-D1D5C2AD3BA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesRabitMq.Transfer.Application", "MicroServicesRabitMq.Transfer.Application\MicroServicesRabitMq.Transfer.Application.csproj", "{1E8B1C99-150B-4E3F-9684-D1D5C2AD3BA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesRabitMq.Transfer.Data", "MicroServicesRabitMq.Transfer.Data\MicroServicesRabitMq.Transfer.Data.csproj", "{79F39A23-8647-40F6-B1CF-7D6A319FC90C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesRabitMq.Transfer.Data", "MicroServicesRabitMq.Transfer.Data\MicroServicesRabitMq.Transfer.Data.csproj", "{79F39A23-8647-40F6-B1CF-7D6A319FC90C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesRabitMq.Transfer.Domain", "MicroServicesRabitMq.Transfer.Domain\MicroServicesRabitMq.Transfer.Domain.csproj", "{8B8D9EFB-DBCC-459D-8575-C899BE2E60E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServicesRabitMq.Transfer.Domain", "MicroServicesRabitMq.Transfer.Domain\MicroServicesRabitMq.Transfer.Domain.csproj", "{8B8D9EFB-DBCC-459D-8575-C899BE2E60E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServicesRabitMq.WebApp", "MicroServicesRabitMq.WebApp\MicroServicesRabitMq.WebApp.csproj", "{D38195F4-F4D1-4D4B-9921-9812136DEDAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{8B8D9EFB-DBCC-459D-8575-C899BE2E60E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B8D9EFB-DBCC-459D-8575-C899BE2E60E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B8D9EFB-DBCC-459D-8575-C899BE2E60E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38195F4-F4D1-4D4B-9921-9812136DEDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38195F4-F4D1-4D4B-9921-9812136DEDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38195F4-F4D1-4D4B-9921-9812136DEDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38195F4-F4D1-4D4B-9921-9812136DEDAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +137,7 @@ Global
 		{1E8B1C99-150B-4E3F-9684-D1D5C2AD3BA0} = {153251DB-A58F-4B04-9C3E-898476769936}
 		{79F39A23-8647-40F6-B1CF-7D6A319FC90C} = {02BFBC77-6006-44CE-AE6B-4F6FAB6A3C66}
 		{8B8D9EFB-DBCC-459D-8575-C899BE2E60E2} = {E7F85A5C-97D9-4751-9CF4-E3E9CBCC3038}
+		{D38195F4-F4D1-4D4B-9921-9812136DEDAB} = {0E5867A6-4666-4152-A343-CEAB8BF86B47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8C1D284-67B5-4A20-B823-E414167D6FDF}
