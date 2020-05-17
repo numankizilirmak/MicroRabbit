@@ -8,7 +8,7 @@ services:
       dockerfile: MicroServicesRabitMq.Banking.Api/Dockerfile
     links:
       - sqlserver  
-      -rabbitmq
+      - rabbitmq
   microrabittransfer:
     image: ${DOCKER_REGISTRY-}microrabittransfer
     build:
@@ -16,20 +16,20 @@ services:
       dockerfile: MicroServicesRabitMq.Transfer.Api/Dockerfile
     links:
       - sqlserver
-      -rabbitmq
+      - rabbitmq
   sqlserver:
     image: microsoft/mssql-server-linux:2017-latest
     hostname: 'sqlserver'
     environment:
       ACCEPT_EULA: Y
-      SA_PASSWORD: "BigPassw0rd"
+      SA_PASSWORD: "Numan01KIZILIRMAK"
     volumes:
       - ./data/mssql:/var/opt/mssql3
     ports:
-      - '1433:1433'
+      - '1433'
     expose:
       - 1433
-rabbitmq:
+  rabbitmq:
     image: rabbitmq:3-management
     hostname: "rabbitmq"
     labels:
