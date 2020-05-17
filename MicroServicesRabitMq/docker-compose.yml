@@ -1,16 +1,23 @@
 version: '3.4'
 
 services:
-  microservicesrabitmq.banking.api:
-    image: ${DOCKER_REGISTRY-}microservicesrabitmqbankingapi
+  microrabitbanking:
+    image: ${DOCKER_REGISTRY-}microrabitbanking
     build:
       context: .
       dockerfile: MicroServicesRabitMq.Banking.Api/Dockerfile
     links:
+      - sqlserver  
+      -rabbitmq
+  microrabittransfer:
+    image: ${DOCKER_REGISTRY-}microrabittransfer
+    build:
+      context: .
+      dockerfile: MicroServicesRabitMq.Transfer.Api/Dockerfile
+    links:
       - sqlserver
-      
-  
-sqlserver:
+      -rabbitmq
+  sqlserver:
     image: microsoft/mssql-server-linux:2017-latest
     hostname: 'sqlserver'
     environment:
@@ -22,3 +29,15 @@ sqlserver:
       - '1433:1433'
     expose:
       - 1433
+rabbitmq:
+    image: rabbitmq:3-management
+    hostname: "rabbitmq"
+    labels:
+      NAME: "rabbitmq"
+    ports:
+    - "4369:4369"
+    - "5671:5671"
+    - "5672:5672"
+    - "25672:25672"
+    - "15671:15671"
+    - "15672:15672"
